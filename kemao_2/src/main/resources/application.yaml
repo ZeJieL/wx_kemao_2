@@ -4,7 +4,7 @@ spring:
       # serverTimezone=CST 表示指定服务器的时区，CST=China Standard Time
       url: jdbc:mysql://127.0.0.1:3306/kemao_2?useSSL=false&serverTimezone=CST&allowPublicKeyRetrieval=true
       username: root
-      password: root
+      password: 1234
    redis:
       host: 47.112.13.17
       port: 6379
