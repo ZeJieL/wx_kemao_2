@@ -7,13 +7,13 @@
   </parent>
   <artifactId>unsubscribe</artifactId>
   
-  
   <dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>commons</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+
 		<!-- JAXB的API，一般引入Spring、JPA相关的依赖以后，往往都会有 -->
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
@@ -50,7 +50,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
-	
 		<!-- 开发者工具，用于实现热部署，在修改文件以后马上能够生效 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -82,7 +81,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				
 				<configuration>
 					<!-- 可以打包成一个可执行jar -->
 					<executable>true</executable>
@@ -91,16 +89,11 @@
 					<fork>true</fork>
 					<!-- 注意：这种启动和停止，都需要借助一个JMX端口，每个模块的JMX端口号必须不同 -->
 					<!-- 默认端口号是9001，建议每100个端口作为一段端口号分配一个人使用 -->
-					<!-- 这里选择使用10000 -->
+					<!-- 这里选择使用10001 -->
 					<!-- 端口号必须大于1024，并且小于或等于65535 -->
-					<jmxPort>10837</jmxPort>
+					<jmxPort>10702</jmxPort>
 				</configuration>
-				
 			</plugin>
 		</plugins>
 	</build>
-  
-  
-  
-  
 </project>
