@@ -23,7 +23,7 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 @RequestMapping("/lzj/message/receiver")
 public class MessageReceiverController {
 
-private static final Logger LOG = LoggerFactory.getLogger(MessageReceiverController.class);
+  private static final Logger LOG = LoggerFactory.getLogger(MessageReceiverController.class);
 	
 	@Autowired
 	private XmlMapper xmlMapper;
