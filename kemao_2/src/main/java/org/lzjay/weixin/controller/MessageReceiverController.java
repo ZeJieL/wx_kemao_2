@@ -20,7 +20,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 @RestController
-@RequestMapping("/lzj/message/receiver")
+@RequestMapping("/zjay/message/receiver")
 public class MessageReceiverController {
 
 	private static final Logger LOG = LoggerFactory.getLogger(MessageReceiverController.class);
