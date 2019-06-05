@@ -83,8 +83,8 @@ public class AccessTokenManagerSample implements AccessTokenManager {
 	private ResponseToken getRemoteToken(String account) {
 		// 此时完全不管过期的问题，也不管开发者的身份问题，调用此方法，总是获取一个新的令牌。
 
-		String appid = "wx8213212009c79a95";
-		String appSecret = "97840a544d7ee47fb3e86523aa45b047";
+		String appid = "wx72bedf2036f14d7a";
+		String appSecret = "9f7b048fba231572bd75302076dd6e2b";
 
 		String url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential"//
 				+ "&appid=" + appid//

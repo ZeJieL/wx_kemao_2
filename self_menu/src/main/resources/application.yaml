@@ -1,0 +1,26 @@
+spring:
+   datasource:
+      # useSSL=false  表示不使用加密通讯，本机的数据库没有必要加密
+      # serverTimezone=CST 表示指定服务器的时区，CST=China Standard Time
+      url: jdbc:mysql://127.0.0.1:3306/kemao_2?useSSL=false&serverTimezone=CST&allowPublicKeyRetrieval=true
+      username: root
+      password: 1234
+   jpa:
+      # 自动生成数据库的表
+      generate-ddl: true
+      properties:
+         # 设置一个方言，用于自动加上MySQL的引擎名称，默认MyISAM不支持事务，不推荐使用。
+         hibernate.dialect: org.hibernate.dialect.MySQL57Dialect
+   
+   # 配置Redis的连接信息
+   redis:
+      # 这里换自己的IP
+      host: 47.112.13.17
+      port: 6379
+      database: 15
+
+   
+
+# 修改运行时的端口号，因为一个端口号只能被一个人使用。
+# 如果多个人使用一台服务器，自然要使用不同的端口！
+server.port: 8096

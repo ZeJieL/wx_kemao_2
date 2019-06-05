@@ -11,3 +11,7 @@ mvn  spring-boot:stop
 # 停止取消关注程序
 cd ../unsubscribe
 mvn  spring-boot:stop
+
+cd ../self_menu
+mvn  spring-boot:stop
+

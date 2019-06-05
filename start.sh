@@ -14,3 +14,6 @@ mvn  spring-boot:start
 # 启动取消关注程序
 cd ../unsubscribe
 mvn  spring-boot:start
+
+cd ../self_menu
+mvn  spring-boot:start

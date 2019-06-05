@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 public interface CommonsConfig extends
@@ -31,6 +32,12 @@ public interface CommonsConfig extends
 	}
 
 	@Bean
+	public default ObjectMapper objectMapper() {
+		ObjectMapper mapper = new ObjectMapper();
+		return mapper;
+	}
+
+	@Bean
 	public default RedisTemplate<String, ? extends InMessage> inMessageTemplate(//
 			@Autowired RedisConnectionFactory connectionFactory) {
 
@@ -41,7 +48,7 @@ public interface CommonsConfig extends
 
 		return template;
 	}
-	
+
 	@Bean
 	default <T> RedisTemplate<String, T> redisTemplate(//
 			@Autowired RedisConnectionFactory connectionFactory) {
